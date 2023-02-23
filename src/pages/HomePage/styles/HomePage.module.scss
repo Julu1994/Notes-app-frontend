@@ -1,0 +1,47 @@
+@import "../../../scss/color";
+@import "../../../scss/mixins";
+
+.header_wrapper {
+    height: 4.2rem;
+    background-color: $deep_purple;
+    padding: 0 0.7rem;
+}
+
+.main_section {
+    max-width: 1400px;
+    margin: auto;
+    @include flex-row;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    position: relative;
+
+    .notes_list_wrapper {
+        width: 100%;
+        min-height: 92vh;
+        background-color: rgba(0, 0, 0, 0.397);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        border-radius: unset;
+
+        @include screens-md {
+            position: unset;
+            border-radius: 8px;
+            width: 22rem;
+            height: 15rem;
+            background-color: unset;
+        }
+    }
+
+    .notes_details_main_wrapper {
+        border-radius: 8px;
+        padding: 0.5rem;
+        width: 100%;
+
+        @include screens-md {
+            width: 75%;
+            padding: 1.5rem;
+        }
+    }
+}

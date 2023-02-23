@@ -1,0 +1,110 @@
+@import "../../../scss/color";
+@import "../../../scss/mixins";
+
+.notes_list_wrapper {
+    position: relative;
+    width: 80%;
+    height: 92vh;
+    overflow-y: scroll;
+    padding: 2rem 0.5rem;
+    background-color: $white;
+
+    @include screens-md {
+        padding: 1.5rem 1rem;
+        min-width: 15rem;
+        border-radius: 8px;
+        overflow-y: unset;
+        width: 100%;
+        background-color: unset;
+    }
+
+    .note {
+        position: relative;
+        cursor: pointer;
+        @include flex-row-space-between;
+        align-items: center;
+        height: 7rem;
+        background-color: $white;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        padding: 0 0.8rem;
+        border-radius: 8px;
+        transition: all 0.2s linear;
+        margin-top: 2rem;
+
+        &:hover {
+            @include box-shadow-md;
+            transition: all 0.2s linear;
+        }
+
+        .note_details {
+            @include flex-col;
+            gap: 0.8rem;
+            width: 70%;
+
+            h2 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: $purlpe_2;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: $purlpe_2;
+                opacity: 0.9;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        p {
+            font-size: 0.6rem;
+            color: $purlpe_2;
+            opacity: 0.9;
+        }
+    }
+}
+
+.note_actions {
+    @include flex-row;
+    gap: 1rem;
+    position: absolute;
+    right: 0.8rem;
+    top: -0.8rem;
+
+    button {
+        cursor: pointer;
+        border: unset;
+        @include flex-row-center;
+        gap: 0.5rem;
+        background-color: $white;
+        border-radius: 50%;
+        padding: 0.2rem;
+        border: 1px solid #e4e3e3;
+    }
+}
+
+.error_text {
+    margin-top: 2rem;
+    color: $red_main;
+    text-align: center;
+}
+
+.loading_state {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-25%, -50%);
+}
+
+.add_opacity {
+    opacity: 0.3;
+}

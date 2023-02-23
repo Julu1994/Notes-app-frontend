@@ -1,0 +1,98 @@
+@import "../../../scss/color";
+@import "../../../scss/mixins";
+
+.add_new_notes_wrapper {
+    width: 100%;
+    position: relative;
+
+    .calcel_btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        button {
+            background: unset;
+            border: unset;
+            cursor: pointer;
+        }
+    }
+
+    .form_wrapper {
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $deep_purple;
+
+            @include screens-md {
+                font-size: 1.5rem;
+            }
+        }
+
+        .notes_form {
+            margin-top: 2rem;
+            @include flex-col;
+            gap: 2rem;
+
+            textarea {
+                width: 100%;
+                min-height: 15rem;
+                border: 1px solid $light_gray;
+                border-radius: 6px;
+                padding: 1rem;
+                font-size: 0.9rem;
+                font-family: "Roboto", sans-serif;
+                letter-spacing: 0.5px;
+                outline: none;
+                transition: all 0.2s linear;
+
+                &::placeholder {
+                    font-family: "Roboto", sans-serif;
+                    font-size: 1rem;
+                }
+
+                &:focus {
+                    border: 1px solid $deep_purple;
+                    transition: all 0.2s linear;
+                }
+            }
+
+            .errorTextarea {
+                border: 1px solid $red_main;
+
+                &:focus {
+                    border: 1px solid $red_main;
+                }
+
+                &::placeholder {
+                    color: $red_main;
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+
+            @include screens-md {
+                width: 12rem;
+            }
+        }
+
+        .error_message {
+            margin-top: -1.5rem;
+            font-size: 0.8rem;
+            color: $red_main;
+        }
+    }
+
+    .loading_state {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+    }
+
+    .opacity_blur {
+        opacity: 0.3;
+    }
+}

@@ -1,0 +1,63 @@
+@import "../../../scss/mixins";
+@import "../../../scss/color";
+
+.notes_container {
+    position: relative;
+    @include flex-col;
+    gap: 1rem;
+
+    .notes_details_wrapper {
+        @include flex-col;
+        background-color: $white;
+        padding: 1rem;
+        border-radius: 8px;
+        gap: 1rem;
+
+        @include screens-md {
+            padding: 2rem;
+        }
+
+        .notes_title {
+            @include flex-row-space-between;
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $purlpe_2;
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: $purlpe_2;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            letter-spacing: 0.8px;
+            color: $dark_gray;
+        }
+    }
+
+    .empty_message {
+        p {
+            color: $deep_purple;
+            font-weight: 500;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+}
+
+.add_opacity {
+    opacity: 0.3;
+}
+
+.loading_state {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    z-index: 20;
+    transform: translate(-50%);
+}

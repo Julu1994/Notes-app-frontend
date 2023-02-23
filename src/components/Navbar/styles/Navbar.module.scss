@@ -1,0 +1,46 @@
+@import "../../../../src/scss/color";
+@import "../../../../src/scss/mixins";
+
+.nav {
+    @include flex-row-space-between;
+    align-items: center;
+    max-width: 1400px;
+    height: 100%;
+    margin: auto;
+
+    @include screens-md {
+        padding: 0 2rem;
+    }
+
+    .nav_title {
+        @include flex-row-center;
+        gap: 0.5rem;
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $white;
+        }
+    }
+}
+
+.arrow_btn {
+    display: unset;
+    cursor: pointer;
+
+    @include screens-md {
+        display: none;
+    }
+
+    button {
+        border: unset;
+        background-color: unset;
+        transition: all 0.2s linear;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateX(0.2rem);
+            transition: all 0.2s linear;
+        }
+    }
+}

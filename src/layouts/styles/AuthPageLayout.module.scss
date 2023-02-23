@@ -1,0 +1,80 @@
+@import "../../scss/color";
+@import "../../scss/mixins";
+
+.auth_section {
+    height: 80vh;
+
+    &_header {
+        background-color: $deep_purple;
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            @include flex-row-center;
+            gap: 0.5rem;
+            color: $white;
+        }
+
+        @include box-shadow-sm;
+        height: 4rem;
+        @include flex-col-center;
+        justify-content: center;
+    }
+
+    &_form_wrapper {
+        margin: auto;
+        padding: 0 1rem;
+        max-width: 600px;
+        height: 100%;
+
+        @include screens-md {
+            padding: 0;
+        }
+
+        @include flex-col-center;
+        justify-content: center;
+
+        .form_with_title {
+            position: relative;
+            background-color: $white;
+            @include box-shadow-sm;
+            padding: 1rem;
+            margin: 0 1rem;
+            border-radius: 8px;
+            width: 100%;
+            @include flex-col;
+            gap: 2rem;
+
+            @include screens-md {
+                padding: 2rem;
+            }
+        }
+
+        .auth_section_title {
+            margin-bottom: 1rem;
+
+            h1 {
+                font-size: 1.2rem;
+                font-weight: 400;
+                color: $deep_purple;
+
+                @include screens-md {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .auth_section_link {
+            p {
+                font-weight: 500;
+            }
+        }
+
+        .loading_line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+}

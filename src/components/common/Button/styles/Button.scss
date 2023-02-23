@@ -1,0 +1,48 @@
+@import "../../../../scss/mixins";
+@import "../../../../scss/color";
+
+.button {
+    padding: 0.6rem 2rem;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    &:hover {
+        @include box-shadow-sm;
+        transition: all 0.2s linear;
+    }
+
+    @include screens-md {
+        letter-spacing: 0.5px;
+        font-size: 1rem;
+    }
+}
+
+//purple background
+.primary {
+    background-color: $deep_purple;
+    border: unset;
+    color: $white;
+    font-weight: 500;
+    border-radius: 4px;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+//White background black-border
+.btn-border {
+    background-color: unset;
+    color: $black_main;
+    border-radius: 4px;
+    border: 1px solid $deep_purple;
+    font-weight: 400;
+    transition: all 0.2s linear;
+
+    &:hover {
+        background-color: $purlpe_light;
+        color: $white;
+        transition: all 0.2s linear;
+    }
+}

@@ -1,0 +1,85 @@
+@import "./color";
+/* Breakpoints mobile first approach */
+$bp-xs: 412px;
+$bp-sm: 575px;
+$bp-md: 768px;
+$bp-lg: 1020px;
+$bp-xl: 1280px;
+
+/* Mixins for media query */
+@mixin screens-xs {
+    @media (min-width: $bp-xs) {
+        @content;
+    }
+}
+
+@mixin screens-sm {
+    @media (min-width: $bp-sm) {
+        @content;
+    }
+}
+
+@mixin screens-md {
+    @media (min-width: $bp-md) {
+        @content;
+    }
+}
+
+@mixin screens-lg {
+    @media (min-width: $bp-lg) {
+        @content;
+    }
+}
+
+@mixin screens-xl {
+    @media (min-width: $bp-xl) {
+        @content;
+    }
+}
+
+/*------------------------------*/
+
+/*  Flex Mixin  */
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-col-space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin flex-row-space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*--------------BOX-SHADOW----------------*/
+
+@mixin box-shadow-sm {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+@mixin box-shadow-md {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}

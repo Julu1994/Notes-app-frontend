@@ -1,0 +1,35 @@
+@import "../../../scss//color";
+@import "../../../scss/mixins";
+
+.form {
+    @include flex-col;
+    gap: 1.8rem;
+    width: 100%;
+
+    &_buttons {
+        @include flex-row;
+        gap: 1rem;
+
+        button {
+            width: 50%;
+        }
+    }
+
+    &_input_field {
+        position: relative;
+
+        .view_btn {
+            position: absolute;
+            right: 0.5rem;
+            top: 0.54rem;
+            z-index: 10;
+
+            button {
+                border: unset;
+                background-color: unset;
+                z-index: 10;
+                cursor: pointer;
+            }
+        }
+    }
+}
