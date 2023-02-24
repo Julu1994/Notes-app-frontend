@@ -69,7 +69,7 @@ const SignupPage = () => {
         sendRequest(
             {
                 method: "POST",
-                url: "/auth/signup",
+                url: "http://63.35.212.223:8181/api/v1",
                 postData: {
                     firstName,
                     lastName,
