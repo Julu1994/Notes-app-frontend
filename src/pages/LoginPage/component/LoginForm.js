@@ -23,13 +23,14 @@ const LoginForm = ({
             <div>
                 <TextField
                     fullWidth
+                    required
+                    id="outlined-required"
                     size={"small"}
                     name={"email"}
                     type={"text"}
                     label={"Email"}
-                    value={email}
+                    defaultValue={email}
                     onChange={onChangeHandler}
-                    required={true}
                     error={error ? true : false}
                     helperText={error?.errorMessage ? error.errorMessage : ""}
                 />
@@ -51,7 +52,7 @@ const LoginForm = ({
                     onChange={onChangeHandler}
                     type={showPasswod ? "text" : "password"}
                     label={"Password"}
-                    value={password}
+                    defaultValue={password}
                     required={true}
                     error={error ? true : false}
                     helperText={error?.errorMessage ? error.errorMessage : ""}
