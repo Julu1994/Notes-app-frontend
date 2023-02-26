@@ -43,6 +43,7 @@ const HomePage = () => {
 
     //Get responce data from server
     const getAllNotes = (data) => {
+        console.log(data);
         setNotes(data);
         //Get first note id so that when app load it will render first note.
         const [initialNoteId] = data.slice(0, 1);
